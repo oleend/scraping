@@ -16,7 +16,7 @@ print("development" in existing_repo.branches)
 # cd into folder
 # run python file
 
-
+existing_repo.index.add(['text.txt'])
     
          
 
