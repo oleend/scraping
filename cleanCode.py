@@ -22,9 +22,16 @@ class GitOperation:
             # Create a new branch
             self.repo.git.branch(branchName)
             self.repo.git.checkout(branchName)
+    def commitFile(self,filename):
+       self.repo.index.add(filename)
+       self.repo.index.commit(f'Updated {filename}')
+       self.repo.remotes.origin.push()
+
+    
 
 if __name__ == "__main__":
     #object of a class or an instance of a class
     gitObject = GitOperation(repo = 'C:\ScrappingPython\scraping') 
     gitObject.listBranch()
-    gitObject.createOrSwitchBranch('TestBranch')
+    #gitObject.createOrSwitchBranch('TestBranch')
+    gitObject.commitFile('cleanCode.py')
