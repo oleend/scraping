@@ -77,7 +77,7 @@ def view_issues(state="open"):
     print(url)
     #url = 'https://api.github.com/repos/oleend/actions/issues?state=open'
     headers = {
-            "Authorization": f"token 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",
+            "Authorization": f"token ",
             "Accept": "application/vnd.github.v3+json"
         }
     response = requests.get(url, headers=headers)
